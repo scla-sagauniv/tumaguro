@@ -1,7 +1,8 @@
 # ツマグロカップ
 
 ## 最初にやること
+※ホームディレクトリ下に`develop`ディレクトリが存在するていで書いている
 ```bash
-mkdir tumaguro
+mkdir ~/develop/tumaguro
 touch index.html style.css script.js
 ```
