@@ -16,13 +16,13 @@
   right: 60px;
   top: 100px;
   width: 260px;
-  background-color: khaki;
 }
 
 .right-sum {
   grid-column: 2 / 3;
   /* 2列目から3列目まで */
   padding: 20px;
+  background-color: #ffd700;
 }
 
 .right-money {
@@ -35,18 +35,26 @@
   border-color: #c0c0c0;
 }
 
-.right-column {
-  padding: 40px;
-}
-
 .cash-register {
   padding: 20px;
   width: 100%;
-  background-color: yellowgreen;
+  background-color: #ffa500;
+  border-radius: 35px;
+}
+
+.cash-register-margin {
+  margin-top: 5%;
+  margin-bottom: 25%;
+
+}
+
+.right-column {
+  padding: 40px;
+  background-color: #ffd700;
 }
 
 .cash-register:hover {
-  background-color: aqua;
+  background-color: #ff8c00;
 }
 
 .best-goods {
