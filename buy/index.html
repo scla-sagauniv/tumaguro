@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>決済画面</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+  <div class="payment-wrap">
+    <div class="setting-form">
+      <div class="address">
+        <div class="midashi">
+          お届け先
+        </div>
+        <div class="kojinjouhou">
+          <input type="text" placeholder="お名前">
+          <input type="text" placeholder="郵便番号">
+          <input type="text" placeholder="住所">
+          <input type="text" placeholder="電話番号">
+        </div>
+      </div>
+      <div class="payment-style">
+        <div class="midashi">
+          お支払方法
+        </div>
+        <div class="choice">
+          <div>
+            <input type="radio" name="pay" value="credit">
+            クレジットカード
+            <input type="text" placeholder="番号">
+            <input type="text" placeholder="有効期限">
+            <input type="text" placeholder="セキュリティコード">
+          </div>
+          <div>
+            <input type="radio" name="pay" value="konbini">
+            コンビニ支払い <br>
+            お近くのコンビニでお支払いいただけます
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="payment">
+      <div class="check">
+        <div class="price-text">
+          お支払い金額
+        </div>
+        <div class="price">
+          ￥10000
+        </div>
+        <div class="buy">
+          <button>購入</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
