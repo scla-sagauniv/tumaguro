@@ -1,0 +1,80 @@
+.grid-container {
+  display: flex;
+  /* grid-template-columns: 1fr 1fr; 2つの等しい幅の列 */
+  gap: 10px;
+  /* グリッドアイテム間の間隔 */
+}
+
+.left-column {
+  grid-column: 1 / 2;
+  /* 1列目から2列目まで */
+  padding: 20px;
+}
+
+.grid-container-right {
+  position: fixed;
+  right: 60px;
+  top: 100px;
+  width: 260px;
+  background-color: khaki;
+}
+
+.right-sum {
+  grid-column: 2 / 3;
+  /* 2列目から3列目まで */
+  padding: 20px;
+}
+
+.right-money {
+  background-color: #ffffff;
+  padding: 30px;
+}
+
+.paypay {
+  border: 3px solid;
+  border-color: #c0c0c0;
+}
+
+.right-column {
+  padding: 40px;
+}
+
+.cash-register {
+  padding: 20px;
+  width: 100%;
+  background-color: yellowgreen;
+}
+
+.cash-register:hover {
+  background-color: aqua;
+}
+
+.best-goods {
+  border: 2px solid;
+  border-color: #a9a9a9;
+}
+
+.grid-item {
+  gap: 50px;
+  align-items: center;
+  width: 70%;
+  display: flex;
+  border: 1px solid #ccc;
+  padding: 0;
+  text-align: left;
+}
+
+.grid-item p,
+h3 {
+  margin: 0;
+}
+
+.product-image {
+  max-width: 20%;
+  height: auto;
+}
+
+.product-price {
+  color: #B12704;
+  font-size: 20px;
+}
