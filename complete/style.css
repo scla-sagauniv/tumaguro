@@ -1,0 +1,41 @@
+.purchase {
+  display: flex;
+  justify-content: center;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.address-ditail {
+  display: flex;
+  justify-content: center;
+  font-size: x-large;
+}
+
+.Address {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: rgb(105, 104, 102);
+  border-radius: 60px;
+  width: 400px;
+  margin-left: 35%;
+  display: block;
+  margin: auto;
+}
+
+.margin-top {
+  margin-top: 7%;
+}
+
+.button-continue {
+  background-color: rgb(250, 169, 112);
+  display: block;
+  margin: auto;
+  margin-top: 5%;
+  cursor: pointer;
+  font-size: x-large;
+  border-radius: 10px;
+}
+
+.button-continue:hover {
+  background-color: rgb(255, 106, 0);
+}
