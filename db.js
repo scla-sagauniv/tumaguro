@@ -1,4 +1,4 @@
-products = [
+const products = [
   {
     id: "00000000001",
     title: "すごく切れるハサミ",
@@ -63,3 +63,5 @@ products = [
     img: "test7.png",
   },
 ];
+
+export default products;
