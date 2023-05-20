@@ -3,6 +3,9 @@ import products from "../static/db.js";
 const itemsContainer = document.getElementById("item-list-container");
 
 for (const product of products) {
+  const rink = document.createElement("a");
+  rink.href = `../product_details/?id=${product.id}`;
+
   const gridItem = document.createElement("div");
   gridItem.classList.add("grid-item");
 
@@ -29,6 +32,7 @@ for (const product of products) {
   gridItem.appendChild(h3);
   gridItem.appendChild(price);
   gridItem.appendChild(review);
+  rink.appendChild(gridItem);
 
-  itemsContainer.appendChild(gridItem);
+  itemsContainer.appendChild(rink);
 }
