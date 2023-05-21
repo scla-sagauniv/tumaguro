@@ -1,3 +1,25 @@
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back {
+  font-size: 16px;
+  font-weight: bold;
+  color: #504f4f;
+  width: 160px;
+}
+
+.back:hover {
+  color: black;
+}
+
+.dumy {
+  width: 160px;
+}
+
 .grid-container {
   display: flex;
   /* grid-template-columns: 1fr 1fr; 2つの等しい幅の列 */
