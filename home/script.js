@@ -1,8 +1,12 @@
 import products from "../static/db.js";
 
+const url = new URL(location.href);
+const params = new URLSearchParams(url.search);
+const query = params.get("query");
+
 const itemsContainer = document.getElementById("item-list-container");
 
-for (const product of products) {
+for (const product of select()) {
   const rink = document.createElement("a");
   rink.href = `../product_details/?id=${product.id}`;
 
@@ -36,3 +40,22 @@ for (const product of products) {
 
   itemsContainer.appendChild(rink);
 }
+
+var string = "isogram";
+var pattern = "og";
+if (string.indexOf(pattern) > -1) {
+  // 部分一致のときの処理
+}
+
+function select() {
+  return query ? products.filter((e) => e.title.indexOf(query) > -1) : products;
+}
+
+const searchElement = document.getElementById("search");
+searchElement.value = query;
+function search() {
+  window.location.href = `../home/?query=${searchElement.value}`;
+}
+
+const searchButton = document.getElementById("search-button");
+searchButton.addEventListener("click", search);
