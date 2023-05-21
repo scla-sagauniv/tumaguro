@@ -1,0 +1,44 @@
+h1 {
+  color: black;
+  margin-bottom: 5%;
+  font-size: 160px;
+  text-align: center;
+
+}
+
+body.alert {
+  background-color: #f00;
+}
+
+.popup {
+  text-align: center;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+.p {
+  font-size: 300px;
+}
+
+.pop {
+  display: none;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  padding: 20px;
+  background-color: black;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  color: #ccc;
+  font-size: 30px;
+}
+
+.pop.show {
+  display: block;
+}

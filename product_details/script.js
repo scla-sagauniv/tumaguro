@@ -26,16 +26,19 @@ price.textContent = `¥${product.price}`;
 const company = document.getElementsByClassName("company")[0];
 company.textContent = `${product.from}`;
 
+const explain = document.getElementsByClassName("explain")[0];
+company.textContent = `${product.explain}`;
+
 const addCartButton = document.getElementById("add-cart-button");
 
 function addCart() {
   console.log("click");
   const cartItemIds = localStorage.getItem("cartItemIds");
   console.log(cartItemIds);
-  if (cartItemIds != null) {
-    localStorage.setItem(`cartItemIds`, `${cartItemIds},${id}`);
-  } else {
+  if (cartItemIds === null || cartItemIds === "") {
     localStorage.setItem(`cartItemIds`, `${id}`);
+  } else {
+    localStorage.setItem(`cartItemIds`, `${cartItemIds},${id}`);
   }
 }
 
