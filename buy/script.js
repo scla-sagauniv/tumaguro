@@ -15,8 +15,12 @@ for (const id of cartItemIdList) {
 }
 
 const address = document.getElementById("address");
+const post = document.getElementById("post");
 function submitA() {
   localStorage.setItem("address", address.value);
+  localStorage.setItem("post", post.value);
+  localStorage.setItem("cartItemIds", null);
+  window.location.href = "../complete";
 }
 
 const submitButton = document.getElementsByClassName("buy")[0];
