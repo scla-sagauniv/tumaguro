@@ -26,6 +26,9 @@ price.textContent = `¥${product.price}`;
 const company = document.getElementsByClassName("company")[0];
 company.textContent = `${product.from}`;
 
+const explain = document.getElementsByClassName("explain")[0];
+company.textContent = `${product.explain}`;
+
 const addCartButton = document.getElementById("add-cart-button");
 
 function addCart() {
