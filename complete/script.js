@@ -7,4 +7,4 @@ const postElement = document.getElementById("post");
 addressElement.textContent = address;
 postElement.textContent = post;
 
-console.log(address, post);
+localStorage.clear();

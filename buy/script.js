@@ -19,7 +19,6 @@ const post = document.getElementById("post");
 function submitA() {
   localStorage.setItem("address", address.value);
   localStorage.setItem("post", post.value);
-  localStorage.setItem("cartItemIds", null);
   window.location.href = "../complete";
 }
 
