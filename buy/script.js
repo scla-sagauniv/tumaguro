@@ -29,5 +29,6 @@ const danger = document.getElementById("danger");
 danger.addEventListener("click", (event) => {
   if (event.target.classList.contains("delete")) {
     event.target.parentNode.remove();
+    window.location.href = "../danger";
   }
 });
