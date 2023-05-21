@@ -24,3 +24,10 @@ function submitA() {
 
 const submitButton = document.getElementsByClassName("buy")[0];
 submitButton.addEventListener("click", submitA);
+
+const danger = document.getElementById("danger");
+danger.addEventListener("click", (event) => {
+  if (event.target.classList.contains("delete")) {
+    event.target.parentNode.remove();
+  }
+});
