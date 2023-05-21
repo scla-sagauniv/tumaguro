@@ -1,3 +1,14 @@
+.back {
+  font-size: 16px;
+  font-weight: bold;
+  color: #504f4f;
+  width: 160px;
+}
+
+.back:hover {
+  color: black;
+}
+
 .detail-wrap {
   display: flex;
   align-items: center;

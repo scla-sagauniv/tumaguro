@@ -9,11 +9,13 @@
 <body>
   <header style="margin: 24px 0;">
     <h1 class="header-title">ほげほげショッピング</h1 class="header-title">
-    <form class="search-form">
-      <input type="text" placeholder="キーワード検索" />
-      <button class="button-header" type="submit">検索</button>
-      <button class="button-header" type="submit">カート</button>
-    </form class="search-form">
+    <div onsubmit="return false;" class="search-form">
+      <input type="text" placeholder="キーワード検索" id="search" />
+      <button class="button-header" id="search-button">検索</button>
+      <a href="../cart/">
+        <button class="button-header">カート</button>
+      </a>
+    </div class="search-form">
   </header>
   <div class="grid-container" id="item-list-container">
     <!-- <div class="grid-item">

@@ -5,7 +5,9 @@ const cartItemIdList = cartItemIds.split(",");
 
 const cartItems = document.getElementById("cart-items");
 
-for (const id of cartItemIdList) {
+let priceSum = 0;
+
+for (const [index, id] of cartItemIdList.entries()) {
   const productIndex = products.findIndex((e) => e.id === id);
   const product = products[productIndex];
 
@@ -22,12 +24,15 @@ for (const id of cartItemIdList) {
   const price = document.createElement("p");
   price.classList.add("product-price");
   price.textContent = `¥${product.price}`;
+  priceSum += product.price;
 
   const button1 = document.createElement("button");
   button1.textContent = "後で買う";
 
   const button2 = document.createElement("button");
   button2.textContent = "削除";
+  button2.classList.add("delete");
+  button2.setAttribute("idx", index);
 
   cartItem.appendChild(img);
   cartItem.appendChild(h3);
@@ -37,3 +42,34 @@ for (const id of cartItemIdList) {
 
   cartItems.appendChild(cartItem);
 }
+
+const priceSumElement = document.getElementsByClassName("right-money")[0];
+priceSumElement.textContent = `¥${priceSum}`;
+
+cartItems.addEventListener("click", (event) => {
+  if (event.target.classList.contains("delete")) {
+    event.target.parentNode.remove();
+
+    const idx = event.target.getAttribute("idx");
+    cartItemIdList.splice(idx, 1);
+
+    priceSum = 0;
+    for (const id of cartItemIdList) {
+      const productIndex = products.findIndex((e) => e.id === id);
+      const product = products[productIndex];
+
+      priceSum += product.price;
+      priceSumElement.textContent = `¥${priceSum}`;
+    }
+
+    let cartItemIdsString = "";
+    cartItemIdList.forEach((e) => {
+      if (cartItemIdsString === "") {
+        cartItemIdsString = `${e}`;
+      } else {
+        cartItemIdsString += `,${e}`;
+      }
+    });
+    localStorage.setItem("cartItemIds", cartItemIdsString);
+  }
+});
