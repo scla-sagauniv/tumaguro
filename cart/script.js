@@ -5,6 +5,8 @@ const cartItemIdList = cartItemIds.split(",");
 
 const cartItems = document.getElementById("cart-items");
 
+let priceSum = 0;
+
 for (const id of cartItemIdList) {
   const productIndex = products.findIndex((e) => e.id === id);
   const product = products[productIndex];
@@ -22,6 +24,7 @@ for (const id of cartItemIdList) {
   const price = document.createElement("p");
   price.classList.add("product-price");
   price.textContent = `¥${product.price}`;
+  priceSum += product.price;
 
   const button1 = document.createElement("button");
   button1.textContent = "後で買う";
@@ -37,3 +40,6 @@ for (const id of cartItemIdList) {
 
   cartItems.appendChild(cartItem);
 }
+
+const priceSumElement = document.getElementsByClassName("right-money")[0];
+priceSumElement.textContent = `¥${priceSum}`;
